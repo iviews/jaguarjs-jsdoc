@@ -43,15 +43,15 @@ $(function () {
     }
 
     // Auto resizing on navigation
-    var _onResize = function () {
-        var height = $(window).height();
-        var $el = $('.navigation');
-
-        $el.height(height).find('.list').height(height - 133);
-    };
-
-    $(window).on('resize', _onResize);
-    _onResize();
+    //var _onResize = function () {
+    //    var height = $(window).height();
+    //    var $el = $('.navigation');
+    //
+    //    $el.height(height).find('.list').height(height - 133);
+    //};
+    //
+    //$(window).on('resize', _onResize);
+    //_onResize();
 
     // disqus code
     if (config.disqus) {
