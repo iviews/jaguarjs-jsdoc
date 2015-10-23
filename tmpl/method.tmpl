@@ -10,6 +10,7 @@ var self = this;
                 <span class="inherited"><?js= this.linkto(data.inherits, 'inherited') ?></span>
             <?js } ?>
             <?js= data.attribs + (kind === 'class' ? 'new ' : '') + (data.scope === 'static' ? longname : name) + (kind !== 'event' ? data.signature : '') ?>
+            <?js= data.signatureReturns ?>
         </h4>
     
         <?js if (data.meta) {?>

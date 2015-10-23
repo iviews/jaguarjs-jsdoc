@@ -52,12 +52,30 @@ var self = this;
             ?>
             <span class="subtitle">Methods</span>
             <?js
+                var originalMethods = item.methods.filter(function(v) { return !v.inherited; });
+                var inheritedMethods = item.methods.filter(function(v) { return v.inherited; });
 
-                item.methods.forEach(function (v) {
+                originalMethods.forEach(function (v) {
             ?>
-                <li data-name="<?js= v.longname ?>"><?js= self.linkto(v.longname, v.name) ?></li>
+                <li data-name="<?js= v.longname ?>">
+                    <?js= self.linkto(v.longname, v.name) ?>
+                </li>
             <?js
                 });
+
+                if (inheritedMethods.length) {
+            ?>
+                <span class="subsubtitle">Inherited</span>
+            <?js
+                    inheritedMethods.forEach(function (v) {
+            ?>
+                    <li data-name="<?js= v.inherits ?>">
+                        <em class="inherited-method" title="inherited from <?js= v.inherits.replace(/#.*/,'') ?>"><?js= self.linkto(v.inherits, v.name) ?></em>
+                    </li>
+            <?js
+                    });
+                }
+
             }
             ?>
             </ul>

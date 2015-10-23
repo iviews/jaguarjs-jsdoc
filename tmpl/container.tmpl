@@ -107,15 +107,32 @@
     
     <?js
         var methods = self.find({kind: 'function', memberof: title === 'Global' ? {isUndefined: true} : doc.longname});
-        if (methods && methods.length && methods.forEach) { 
-    ?>
-        <h3 class="subsection-title">Methods</h3>
+        if (methods && methods.length && methods.forEach) {
+            var originalMethods = methods.filter(function(v) { return !v.inherited; });
+            var inheritedMethods = methods.filter(function(v) { return v.inherited; });
 
-        <div class="methods">
-            <?js methods.forEach(function(m) { ?>
-                <?js= self.partial('method.tmpl', m) ?>
-            <?js }); ?>
-        </div>
+
+    ?>
+            <h3 class="subsection-title">Methods</h3>
+
+            <div class="methods">
+                <?js originalMethods.forEach(function(m) { ?>
+                    <?js= self.partial('method.tmpl', m) ?>
+                <?js }); ?>
+            </div>
+
+            <?js if (inheritedMethods.length) {
+            ?>
+                <h4 class="subsection-title">Intherited methods</h4>
+                <div class="inherited-methods">
+                    <?js methods.filter(function(m) { return m.inherited}).forEach(function(m,index,array) { ?>
+                    <?js= self.linkto(m.inherits, m.attribs + m.name + m.signature) ?><?js= index < array.length -1 ? ', ' : '' ?>
+
+                    <?js }); ?>
+                </div>
+            <?js
+            }
+            ?>
     <?js } ?>
     
     <?js
