@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="static/scripts/prettify/|**/bower_components/*|**/dist/*|**/node_modules/*|static/scripts/|demo/sample/|**/*.min.js" kind="src" path=""/>
+	<classpathentry excluding="**/bower_components/*|**/dist/*|**/node_modules/*|**/*.min.js" kind="src" path="demo/sample"/>
+	<classpathentry excluding="**/bower_components/*|**/dist/*|**/node_modules/*|prettify/|**/*.min.js" kind="src" path="static/scripts"/>
+	<classpathentry excluding="**/bower_components/*|**/dist/*|**/node_modules/*|**/*.min.js" kind="src" path="static/scripts/prettify"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
