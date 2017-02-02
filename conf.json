@@ -9,7 +9,7 @@
 		"default": {
 			"outputSourceFiles" : true
 		},
-		"applicationName": "k-infinity JavaScript API",
+		"applicationName": "JavaScript API",
 		"disqus": "",
 		"googleAnalytics": "",
 		"openGraph": {
