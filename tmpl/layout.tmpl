@@ -51,16 +51,13 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="http://www.i-views.com">
-                    <img alt="i-views" src="assets/img/i-views-logo.svg">
+                    <img alt="i-views" src="../assets/img/i-views-logo.svg">
                 </a>
             </div>
-            <div class="collapse navbar-collapse" id="documentation-links">
-                <ul class="nav navbar-nav navbar-right ">
-                    <li><a href="../">Back to documentation index</a></li>
-                </ul>
-            </div>
+            <p class="navbar-text navbar-right">Version <?js= env.opts.query.iviewsVersion ?>&nbsp;</p>
         </div>
     </nav>
+    
     <?js // Ende: Inhalt der Datei `kinf-js-api/bootprint-config/iviews-core/partials/base/header.hbs` ?>
 
     <div class="container">
@@ -85,6 +82,15 @@
             </div>
         </div>
     </div>
+
+    <nav class="navbar navbar-fixed-bottom navbar-inverse iv-footer-bar">
+        <div class="container">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../">zurück zur Dokumentation</a></li>
+            </ul>
+        </div>
+    </nav>
+    
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
     <script src="scripts/jquery.min.js"></script>
