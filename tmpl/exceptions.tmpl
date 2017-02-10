@@ -14,12 +14,14 @@
     </thead>
     <tbody>
         <?js data.forEach(function(r) { ?>
+            <tr>
             <td>
                 <?js if(r && r.type && r.type.names) { ?>
                     <?js= self.partial('type.tmpl', r.type.names) ?>
                 <?js } ?>
             </td>
             <td><?js= r && r.description ?></td>
+            </tr>
         <?js }) ?>
 
     </tbody>
