@@ -1,4 +1,5 @@
 .settings/
+.idea/
 node_modules/
 demo/dist/
 *.iml
